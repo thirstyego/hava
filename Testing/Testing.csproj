@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\apichipper\apichipper.csproj" />
+      <ProjectReference Include="..\hava\hava.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,8 +1,8 @@
 using System.Net;
 using System.Text;
 using System.Text.Json;
-using apichipper.Auth;
-using apichipper.Models.Auth;
+using hava.Auth;
+using hava.Models.Auth;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
 
 

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apichipper", "apichipper\apichipper.csproj", "{BE66155E-B719-4173-BC2C-E19C7EDC8B3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hava", "hava\hava.csproj", "{BE66155E-B719-4173-BC2C-E19C7EDC8B3B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{490010C9-B65E-4A55-92FF-DA1EF72AF458}"
 EndProject
