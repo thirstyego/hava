@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apichipper", "apichipper\apichipper.csproj", "{BE66155E-B719-4173-BC2C-E19C7EDC8B3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{490010C9-B65E-4A55-92FF-DA1EF72AF458}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE66155E-B719-4173-BC2C-E19C7EDC8B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE66155E-B719-4173-BC2C-E19C7EDC8B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE66155E-B719-4173-BC2C-E19C7EDC8B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE66155E-B719-4173-BC2C-E19C7EDC8B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{490010C9-B65E-4A55-92FF-DA1EF72AF458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{490010C9-B65E-4A55-92FF-DA1EF72AF458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{490010C9-B65E-4A55-92FF-DA1EF72AF458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{490010C9-B65E-4A55-92FF-DA1EF72AF458}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,79 @@
+
+### Register new user
+POST {{host}}/api/Authenticate/register
+Content-Type: application/json
+
+{
+  "Email": "grandma@gmail.com",
+  "Username": "grandma",
+  "Password": "Mehmet88!"
+}
+
+
+
+### Register new user
+POST {{host}}/api/Authenticate/register
+Content-Type: application/json
+
+{
+  "Email": "mehmet@gmail.com",
+  "Username": "mehmet",
+  "Password": "Mehmet88!"
+}
+
+
+### Register new user
+POST {{host}}/api/Authenticate/register
+Content-Type: application/json
+
+{
+  "Email": "obama@gmail.com",
+  "Username": "obama",
+  "Password": "Mehmet88!"
+}
+
+
+
+
+
+
+
+### Login user
+POST {{host}}/api/Authenticate/login
+Content-Type: application/json
+
+{
+  "Username": "grandma",
+  "Password": "Mehmet88!"
+}
+
+
+### Login user
+POST {{host}}/api/Authenticate/login
+Content-Type: application/json
+
+{
+  "Username": "mehmet",
+  "Password": "Mehmet88!"
+}
+
+> {%
+    client.global.set("mehmet_id1", response.body.id);
+%}
+
+
+### Login user
+POST {{host}}/api/Authenticate/login
+Content-Type: application/json
+
+{
+  "Username": "obama",
+  "Password": "Mehmet88!"
+}
+
+> {%
+    client.global.set("obama_id1", response.body.id);
+    client.global.set("auth_token", response.body.token);
+%}
+
+

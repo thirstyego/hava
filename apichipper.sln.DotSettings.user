@@ -1,0 +1,17 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=48b5ef9e_002D363c_002D445b_002D8f84_002D6599c5e1a1e3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BananaTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::490010C9-B65E-4A55-92FF-DA1EF72AF458::net7.0::Tester.AuthenticateControllerTest.Register_user_test&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::490010C9-B65E-4A55-92FF-DA1EF72AF458::net7.0::Tester.AuthenticateControllerTest.Login_user_test&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8fb8fad4_002D3cf3_002D4ddb_002D9b4a_002Db356f5273c62/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Login_user_test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::490010C9-B65E-4A55-92FF-DA1EF72AF458::net7.0::Tester.AuthenticateControllerTest.Register_user_test&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f3457337_002Def73_002D40e7_002Da89c_002Dbafa96d5a0ff/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Register_user_test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::490010C9-B65E-4A55-92FF-DA1EF72AF458::net7.0::Tester.AuthenticateControllerTest.Register_user_test&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
