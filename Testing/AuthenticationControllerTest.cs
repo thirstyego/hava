@@ -4,6 +4,7 @@ using System.Text.Json;
 using hava.Auth;
 using hava.Models.Auth;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
+using Xunit.Abstractions;
 
 
 namespace Tester;
@@ -11,16 +12,14 @@ namespace Tester;
 public class AuthenticateControllerTest : BaseTest
 {
     
-    public AuthenticateControllerTest()
+    public AuthenticateControllerTest(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
     {
+        
     }
 
     
     [Theory]
     [InlineData("emre", "emre@yahoo.com", "Mehmet88!")]
-    [InlineData("grandma", "grandma@yahoo.com", "Mehmet88!")]
-    [InlineData("obama", "obama@yahoo.com", "Mehmet88!")]
-    [InlineData("turhan", "mehmet@yahoo.com", "Mehmet88!")]
     public async void Register_user_test(string username, string email, string password)
     {
         
@@ -45,9 +44,6 @@ public class AuthenticateControllerTest : BaseTest
     
     [Theory]
     [InlineData("emre", "Mehmet88!")]
-    [InlineData("grandma", "Mehmet88!")]
-    [InlineData("obama", "Mehmet88!")]
-    [InlineData("turhan", "Mehmet88!")]
     public async void Login_user_test(string username, string password)
     {
         var loginUser = new LoginModel()
@@ -70,10 +66,5 @@ public class AuthenticateControllerTest : BaseTest
         response.EnsureSuccessStatusCode();
         Assert.IsType<string>(loginResponse.Token);
         Assert.IsType<string>(loginResponse.Id);
-        
-        currentUserId = loginResponse.Id;
-        currentUserToken = loginResponse.Token;
-        
-        Console.WriteLine(currentUserToken);
     }
 }

@@ -1,33 +1,22 @@
-using System.Text.Json; 
+using System.Text.Json;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Xunit.Abstractions;
+using Xunit.Sdk;
+
 namespace Tester;
 
 public class BaseTest
 {
     
-    public string currentUserToken { get; set; }
-    public string currentUserId { get; set; }
-    protected static readonly HttpClient _httpClient = new HttpClient();
+    public readonly ITestOutputHelper _out;
+
+    public BaseTest(ITestOutputHelper testOutputHelper)
+    {
+        _out = testOutputHelper;
+    } 
     
-    public BaseTest() { }
-    // public BaseTest(string currentUserToken, string currentUserId)
-    // {
-    //     // _httpClient.BaseAddress = new Uri("http://localhost:5249/api/");
-    //     // _httpClient.Timeout = new TimeSpan(0, 0, 30);
-    //     // _httpClient.DefaultRequestHeaders.Clear();
-    //     //
-    //     // _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-    //
-    //     currentUserToken = currentUserToken;
-    //     currentUserId = currentUserId;
-    // }
-    
-    // public static BaseTest? singletonInstance;
-    // public static BaseTest GetInstance()
-    // {
-    //     if (singletonInstance == null)
-    //         singletonInstance = new BaseTest();
-    //     return singletonInstance;
-    // } 
+    public static string currentUserToken = "";
+    public static string currentUserId = "2a13a121-44df-49f9-9727-8a6c255961c4";
     
     
     public static HttpClient Create_HttpClient()
@@ -37,15 +26,37 @@ public class BaseTest
         client.BaseAddress = new Uri("http://localhost:5249/api/");
         client.Timeout = new TimeSpan(0, 0, 30);
         client.DefaultRequestHeaders.Clear();
+        client.DefaultRequestHeaders.Add("Authorization", "Bearer " + currentUserToken);
         
         return client;
     }
-    
-    
-    // protected static readonly HttpClient _httpClient = new HttpClient();
-    protected readonly JsonSerializerOptions _options;
-    
-
-    
-    // public static HttpClient GetInstance() => _httpClient;
 }
+
+// public class CurrentUser
+// {
+//     private static CurrentUser? _currentUser;
+//     public string Token { get; }
+//     public string Id { get; }
+//
+//     public CurrentUser(string token, string id)
+//     {
+//         Token = token;
+//         Id = id;
+//     }
+//     
+//     public static CurrentUser GetUser()
+//     {
+//         Console.WriteLine("currentUser before null check: " + _currentUser);
+//         if (_currentUser == null)
+//         {
+//             _currentUser = new CurrentUser("fdafsdsd", "df");
+//         }
+//         Console.WriteLine("currentUser after: " + _currentUser);
+//         return _currentUser;
+//     }
+//
+//     public static void SetUser(string token, string id)
+//     {
+//         _currentUser = new CurrentUser(token, id);
+//     }
+// }

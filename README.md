@@ -1,4 +1,32 @@
 
+# Everything
+```bash
+
+cd hava/Dockerfiles/postgres
+
+docker stop my-postgres-container
+docker rm my-postgres-container
+docker rmi my-postgres
+docker volume rm pgdata
+docker build -t my-postgres .
+
+docker volume create pgdata
+docker run -p 5432:5432 --name my-postgres-container -v pgdata:/var/lib/postgresql/data -d my-postgres
+docker ps
+
+cd ../..
+rm -rf Migrations
+dotnet ef migrations add initial
+dotnet ef database update
+
+#cd ../Testing
+#dotnet test --filter DisplayName=Tester.AuthenticateControllerTest.Register_user_test
+#dotnet test --filter DisplayName=Tester.AuthenticateControllerTest.Login_user_test
+
+```
+
+
+
 # See Everything
 ```bash
 docker ps
@@ -7,7 +35,8 @@ systemctl status nginx
 
 # On Database Updates
 ```bash
-dotnet ef migrations add
+cd hava
+dotnet ef migrations add initial
 dotnet ef database update
 ```
 
