@@ -8,7 +8,6 @@ namespace Tester;
 public class GroupControllerTest : BaseTest
 {
     
-    
     [Theory]
     [InlineData("Test Group")]
     [InlineData("Chickens Club")]

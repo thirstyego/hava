@@ -25,7 +25,22 @@ dotnet ef database update
 
 ```
 
+# Create 3 new Users
+# Update Home model with new Users
+```bash
 
+
+curl -X POST \
+  http://localhost:8000/api/users \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "username": "johndoe",
+        "email": "johndoe@example.com",
+        "password": "password123"
+      }'
+
+
+```
 
 # See Everything
 ```bash
