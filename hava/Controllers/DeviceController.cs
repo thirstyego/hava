@@ -63,6 +63,11 @@ namespace hava.Controllers
                 return BadRequest();
             }
 
+          if (!ModelState.IsValid)
+          {
+              return BadRequest(ModelState);
+          }
+
             var device = new Device()
             {
                 Id = devicePut.Id,
@@ -102,6 +107,11 @@ namespace hava.Controllers
               return BadRequest();
           }
           
+          if (!ModelState.IsValid)
+          {
+              return BadRequest(ModelState);
+          }
+
             var device = new Device()
             {
                 BatteryPercentage = devicePost.BatteryPercentage,

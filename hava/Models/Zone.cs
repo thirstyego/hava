@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace hava.Models;
 
 public class Zone
@@ -11,13 +13,21 @@ public class Zone
 
 public class ZonePost
 {
+    [Required(ErrorMessage= "Name is required yo")]
     public string Name { get; set; }
+    
+    [Required(ErrorMessage= "HomeId is required yo")]
     public int HomeId { get; set; }
 }
 
 public class ZonePut
 {
+    [Required(ErrorMessage = "Id is required yo")]
     public int Id { get; set; }
+    
+    [Required(ErrorMessage = "Name is required yo")]
     public string Name { get; set; }
+    
+    [Required(ErrorMessage = "HomeId is required yo")]
     public int HomeId { get; set; }
 }

@@ -50,9 +50,7 @@
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=af5a6cb5_002Db153_002D4320_002D807d_002D8d5a2f0b4e29/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_Returns_CreatedAtActionResult" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::490010C9-B65E-4A55-92FF-DA1EF72AF458::net7.0::MyProject.Tests.Controllers.HomeControllerTests&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+  &lt;Project Location="/home/kafka/Desktop/hava/Testing" Presentation="&amp;lt;Testing&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f3457337_002Def73_002D40e7_002Da89c_002Dbafa96d5a0ff/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Register_user_test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/home/kafka/Desktop/hava/Testing" Presentation="&amp;lt;Testing&amp;gt;" /&gt;

@@ -1,46 +1,36 @@
 
-# Everything
-```bash
 
+```bash
+# Run init bash
 cd hava/Dockerfiles/postgres
 
+# Delete old containers and images
 docker stop my-postgres-container
 docker rm my-postgres-container
 docker rmi my-postgres
 docker volume rm pgdata
-docker build -t my-postgres .
 
+# Create new volume and run container
+docker build -t my-postgres .
 docker volume create pgdata
 docker run -p 5432:5432 --name my-postgres-container -v pgdata:/var/lib/postgresql/data -d my-postgres
 docker ps
 
+# Delete Migrations directory and create new migrations
 cd ../..
 rm -rf Migrations
 dotnet ef migrations add initial
 dotnet ef database update
 
-#cd ../Testing
-#dotnet test --filter DisplayName=Tester.AuthenticateControllerTest.Register_user_test
-#dotnet test --filter DisplayName=Tester.AuthenticateControllerTest.Login_user_test
-
+# Run Tests which also seeds DB because of Auth integration test
+cd ../Testing
+dotnet test
 ```
 
-# Create 3 new Users
-# Update Home model with new Users
-```bash
+# 4. Change Owners of homes in DB to user that exists
 
 
-curl -X POST \
-  http://localhost:8000/api/users \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "username": "johndoe",
-        "email": "johndoe@example.com",
-        "password": "password123"
-      }'
 
-
-```
 
 # See Everything
 ```bash

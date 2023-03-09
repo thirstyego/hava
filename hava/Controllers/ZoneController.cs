@@ -67,6 +67,11 @@ namespace hava.Controllers
                 return BadRequest();
             }
 
+          if (!ModelState.IsValid)
+          {
+              return BadRequest(ModelState);
+          }
+
           var zone = new Zone()
           {
               Id = zonePut.Id,
@@ -103,6 +108,11 @@ namespace hava.Controllers
           if (zonePost == null)
           {
               return BadRequest();
+          }
+
+          if (!ModelState.IsValid)
+          {
+              return BadRequest(ModelState);
           }
 
           var zone = new Zone()

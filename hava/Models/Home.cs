@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace hava.Models;
 
 public class Home
@@ -21,14 +23,24 @@ public class HomeGet
 
 public class HomePost
 {
+    [Required(ErrorMessage = "Name is required yo")]
+    [MaxLength(50, ErrorMessage = "Name cannot exceed 50 characters")]
     public string Name { get; set; }
+    
+    [Required(ErrorMessage = "ApplicationUserId is required yo")]
     public string ApplicationUserId { get; set; }
 }
 
 public class HomePut
 {
+    [Required(ErrorMessage = "Id is required")]
     public int Id { get; set; }
+    
+    [Required(ErrorMessage = "Name is required yo")]
+    [MaxLength(50, ErrorMessage = "Name cannot exceed 50 characters")]
     public string Name { get; set; }
+    
+    [Required(ErrorMessage = "ApplicationUserId is required yo")]
     public string ApplicationUserId { get; set; }
 }
 

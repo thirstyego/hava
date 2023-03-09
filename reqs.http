@@ -1,0 +1,12 @@
+
+
+### Login. Retrieve and save token.
+POST {{domain}}/api/Authenticate/login
+Content-Type: application/json
+
+{
+  "username": "uncle",
+  "password": "Mehmet88!"
+}
+
+> {% client.global.set("auth_token", response.body.json.token); %}

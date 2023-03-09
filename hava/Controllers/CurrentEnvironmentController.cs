@@ -65,6 +65,11 @@ namespace hava.Controllers
                 return BadRequest();
             }
             
+          if (!ModelState.IsValid)
+          {
+              return BadRequest(ModelState);
+          }
+
           var currentEnvironment = new CurrentEnvironment()
           { 
               Id = currentEnvironmentPut.Id,
@@ -107,6 +112,11 @@ namespace hava.Controllers
           if (currentEnvironmentPost == null)
           {
               return BadRequest();
+          }
+
+          if (!ModelState.IsValid)
+          {
+              return BadRequest(ModelState);
           }
 
           var currentEnvironment = new CurrentEnvironment()

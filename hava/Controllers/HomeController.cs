@@ -56,7 +56,7 @@ namespace hava.Controllers
             return homeGet;
         }
 
-        // PUT: api/Home/5
+        // PUT: api/Home
         [HttpPut]
         public async Task<IActionResult> PutHome(HomePut homePut)
         {
@@ -64,6 +64,11 @@ namespace hava.Controllers
             {
                 return BadRequest();
             }
+
+          if (!ModelState.IsValid)
+          {
+              return BadRequest(ModelState);
+          }
 
             var home = new Home()
             {
@@ -102,6 +107,11 @@ namespace hava.Controllers
           if (home == null)
           {
               return NotFound();
+          }
+
+          if (!ModelState.IsValid)
+          {
+              return BadRequest(ModelState);
           }
 
           var homeCreate = new Home()

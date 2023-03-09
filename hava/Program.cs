@@ -60,6 +60,17 @@ public class Program
         builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowAllOrigins",
+                builder =>
+                {
+                    builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+        });
+
 
 
         builder.Services.AddControllers();
@@ -84,6 +95,9 @@ public class Program
             app.UseExceptionHandler("/Error");
             app.UseHsts();
         }
+        
+        app.UseCors("AllowAllOrigins");
+
 
 // var logFactory = new LoggerFactory()
 //     .AddConsole(LogLevel.Debug)
